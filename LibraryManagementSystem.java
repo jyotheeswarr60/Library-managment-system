@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner; // Add this import
+import java.util.Scanner; 
 
 public class LibraryManagementSystem {
 
@@ -9,7 +9,7 @@ public class LibraryManagementSystem {
         int id;
         String title;
         String author;
-        LocalDate dateAdded; // Add date field
+        LocalDate dateAdded;
 
         Book(int id, String title, String author, LocalDate dateAdded) {
             this.id = id;
@@ -35,7 +35,7 @@ public class LibraryManagementSystem {
             scanner.nextLine();
 
             switch (choice) {
-                case 1, 3 -> { // Add or Report Book
+                case 1, 3 -> {
                     System.out.print("Enter book title: ");
                     String title = scanner.nextLine();
 
@@ -62,6 +62,8 @@ public class LibraryManagementSystem {
                     System.out.println("Invalid option. Try again.");
                 }
             }
+            scanner.close();
         }
+        
     }
 }
